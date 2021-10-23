@@ -33,5 +33,5 @@ jobs:
         echo 'current directory'
         pwd
         echo 'Copy contents of build'
-        sudo -S cp < ${{secrets.SECRET_PASS}} -r /home/umarcicd/actions-runner/_work/devopsnodereact/devopsnodereact/build/* /usr/share/nginx/reactapp
+        sudo cp -r /home/umarcicd/actions-runner/_work/devopsnodereact/devopsnodereact/build/* /usr/share/nginx/reactapp
        
