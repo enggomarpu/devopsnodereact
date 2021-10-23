@@ -31,4 +31,4 @@ jobs:
     - name: run a multiline script 
       run : |
         echo 'Copy contents of build'
-        cd build/ && cp -R * /usr/share/nginx/reactapp
+        cd build/ && sudo cp -R * /usr/share/nginx/reactapp
