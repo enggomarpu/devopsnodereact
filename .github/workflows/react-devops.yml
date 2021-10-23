@@ -30,7 +30,5 @@ jobs:
 
     - name: run a multiline script 
       run : |
-        echo 'Make directory in nginx folder'
-        mkdir -p /usr/share/nginx/reactapp
         echo 'Copy contents of build'
-        cd build/ && cp -R * /usr/share/nginx/reactapp
+        cd build/ && sudo -S ${{secrets.SECRET_PASS} cp -R * /usr/share/nginx/reactapp
