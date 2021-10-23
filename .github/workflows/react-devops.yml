@@ -27,3 +27,9 @@ jobs:
     - run: npm i
     - run: npm run build --if-present
     - run: npm test
+
+    - name: run a multiline script 
+      run : |
+        sudo mkdir -p /usr/share/nginx/reactapp 
+        sudo cp /home/umarcicd/actions-runner/_work/devopsnodereact/devopsnodereact/build/* /usr/share/nginx/reactapp 
+        sudo chcon -Rt httpd_sys_content_t /usr/share/nginx/reactapp/* 
