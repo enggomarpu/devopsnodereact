@@ -30,6 +30,8 @@ jobs:
 
     - name: run a multiline script 
       run : |
+        echo 'current directory'
+        pwd
         echo 'Copy contents of build'
-        sudo -S /usr/bin/cp -r /home/umarcicd/actions-runner/_work/devopsnodereact/devopsnodereact/build/* /usr/share/nginx/reactapp < ${{secrets.SECRET_PASS}}
+        sudo -S cp -r /home/umarcicd/actions-runner/_work/devopsnodereact/devopsnodereact/build/* /usr/share/nginx/reactapp < ${{secrets.SECRET_PASS}}
        
